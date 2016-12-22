@@ -6,7 +6,7 @@
         <layout class="LoggerLayoutPattern">
             <param name="conversionPattern" value="%date [%logger] %message%newline" />
         </layout>
-        <param name="file" value="d:/temp/myLog.log" />
+        <param name="file" value="lconnectApplication.log" />
     </appender>
  
     <logger name="Foo">
