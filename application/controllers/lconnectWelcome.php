@@ -1,10 +1,9 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-include '/../log4php/src/main/php/Logger.php'; 
-Logger::configure(dirname(__FILE__).'/../log4php/src/test/resources/configs/config1.xml');
-
+include '/../log4php/src/main/php/Logger.php';
 include('AuthenticationAndAuthorization.php');
+Logger::configure(dirname(__FILE__).'/../log4php/src/test/resources/configs/config1.xml');
 
 class lconnectWelcome extends CI_Controller {
     
@@ -28,22 +27,9 @@ class lconnectWelcome extends CI_Controller {
         
 	public function index()
 	{
-               // $andaObj->performAaA();
-		//$this->load->view('login');
-            
-            //include '/../log4php/src/main/php/Logger.php'; 
-            //Logger::configure(dirname(__FILE__).'/../log4php/src/test/resources/configs/config1.xml');
-            // Fetch a logger, it will inherit settings from the root logger
-            $log = Logger::getLogger('myLogger');
-
-            //$logger = Logger::getRootLogger();
-            $log->trace("My first message.");   // Not logged because TRACE < WARN
-            $log->debug("My second message.");  // Not logged because DEBUG < WARN
-            $log->info("My third message.");    // Not logged because INFO < WARN
-            $log->warn("My fourth message.");   // Logged because WARN >= WARN
-            $log->error("My fifth message.");   // Logged because ERROR >= WARN
-            $log->fatal("My sixth message.");   // Logged because FATAL >= WARN
-            
+            $GLOBALS['$log'] = Logger::getLogger('CI_Controller');
+            $GLOBALS['$log']->info("Initializing Logger");
+            $GLOBALS['$log']->debug("Authenticate user and load Authorization object to Session");  // Not logged because DEBUG < WARN                      
             $andaObj = new AuthenticationAndAuthorization();
             $andaObj->performAaA();
 	}

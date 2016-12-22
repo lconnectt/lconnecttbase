@@ -12,19 +12,16 @@
  * @author deepak.srikantaiah
  */
 $GLOBALS['$logger'] = Logger::getLogger("LConnectDataAccess");
-$GLOBALS['a'] = 'localhost';
 
-class LConnectDataAccess {
+class LConnectDataAccess extends CI_Controller {
     
     //put your code here
     function __construct() {
-      echo $GLOBALS['a'];
-       $GLOBALS['$logger']->debug("performAaA..This is Constructor.");
-       print "In BaseClass constructor\n";
-   }    
+       parent::__construct();
+       $this->load->database(); //load database
+    } 
+    
     function connect() {
-        //$logger = Logger::getLogger("LConnectDataAccess");
-        $GLOBALS['$logger']->debug("LConnectDataAccess..This is an informational message.");
-             
+        $GLOBALS['$logger']->debug("LConnectDataAccess..Connecting to Database.");
     }
 }

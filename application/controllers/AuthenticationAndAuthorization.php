@@ -11,13 +11,8 @@
  *
  * @author deepak.srikantaiah
  */
-//require_once dirname(__FILE__).'/../log4php/src/main/php/Logger.php';
 
-//include '/../log4php/src/main/php/Logger.php'; 
-//Logger::configure(dirname(__FILE__).'/../log4php/src/test/resources/configs/config1.xml');
-// Fetch a logger, it will inherit settings from the root logger
-
-include 'LConnectDataAccess.php';
+include '/../core/LConnectDataAccess.php';
 $dataAccessObj = new LConnectDataAccess();
 
 class AuthenticationAndAuthorization {
