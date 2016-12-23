@@ -20,7 +20,7 @@ class AuthenticationAndAuthorization {
     function __construct() {
        
        //$logger = Logger::getLogger("main");
-       print "In BaseClass constructor\n";
+       //print "In BaseClass constructor\n";
    }
     public function performAaA() {    
         $logger = Logger::getLogger('AuthenticationAndAuthorization');
@@ -31,7 +31,26 @@ class AuthenticationAndAuthorization {
 
         $logger->info("This is an informational message performAaA1.");
         $logger->warn("I'm not feeling so good...");
-        $dataAccessObj->connect();
+        $query = 'employee';
+        $where = $data = array(
+                'EMP_ID' => '2',
+            );
+        $result = $dataAccessObj->queryWhere($query, $where);
+        
+        foreach ($result->result_array() as $row)
+        {
+            echo $row['EMP_NAME'];
+            echo $row['EMP_DEPT'];
+            echo $row['EMP_ADDRESS'];
+        }
+        $result1 = $dataAccessObj->query($query);
+        echo '*************';
+        foreach ($result1->result_array() as $row)
+        {
+            echo $row['EMP_NAME'];
+            echo $row['EMP_DEPT'];
+            echo $row['EMP_ADDRESS'];
+        }
     }
     
     public function authenticate() {

@@ -24,4 +24,20 @@ class LConnectDataAccess extends CI_Controller {
     function connect() {
         $GLOBALS['$logger']->debug("LConnectDataAccess..Connecting to Database.");
     }
+    
+    public function queryWhere($queryString, $whereCondition) {
+        $GLOBALS['$logger']->debug("Executing Query: ");
+        $result = $this->db->get_where($queryString, $whereCondition);
+        $this->db->close();
+        $GLOBALS['$logger']->debug("DB Connection closed successfully.. ");
+        return $result;        
+    }
+    
+    public function query($queryString) {
+        $GLOBALS['$logger']->debug("Executing Query: ");
+        $result = $this->db->get($queryString);
+        $this->db->close();
+        $GLOBALS['$logger']->debug("DB Connection closed successfully.. ");
+        return $result;        
+    }
 }
