@@ -22,12 +22,12 @@ class lconnectWelcome extends CI_Controller {
 	 * map to /index.php/welcome/<method_name>
 	 * @see https://codeigniter.com/user_guide/general/urls.html
 	 */
-        
+          
         public $log;
         
 	public function index()
 	{
-            $GLOBALS['$log'] = Logger::getLogger('CI_Controller');
+            $GLOBALS['$log'] = Logger::getLogger('LconnectWelcome..Test');
             $GLOBALS['$log']->info("Initializing Logger");
             $GLOBALS['$log']->debug("Authenticate user and load Authorization object to Session");  // Not logged because DEBUG < WARN                      
             $andaObj = new AuthenticationAndAuthorization();

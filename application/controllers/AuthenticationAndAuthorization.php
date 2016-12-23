@@ -23,7 +23,7 @@ class AuthenticationAndAuthorization {
        print "In BaseClass constructor\n";
    }
     public function performAaA() {    
-        $logger = Logger::getLogger('myLogger');
+        $logger = Logger::getLogger('AuthenticationAndAuthorization');
         $dataAccessObj = new LConnectDataAccess();
         
         //$logger = Logger::getRootLogger();
