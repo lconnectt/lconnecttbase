@@ -27,7 +27,7 @@ class lconnectWelcome extends CI_Controller {
         
 	public function index()
 	{
-            $GLOBALS['$log'] = Logger::getLogger('LconnectWelcome..Test');
+            $GLOBALS['$log'] = Logger::getLogger('LconnectWelcome..Test..1');
             $GLOBALS['$log']->info("Initializing Logger");
             $GLOBALS['$log']->debug("Authenticate user and load Authorization object to Session");  // Not logged because DEBUG < WARN                      
             $andaObj = new AuthenticationAndAuthorization();
