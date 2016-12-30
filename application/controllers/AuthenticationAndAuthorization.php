@@ -13,44 +13,45 @@
  */
 
 include '/../core/LConnectDataAccess.php';
+include '/../core/LConnectApplicationException.php';
 $dataAccessObj = new LConnectDataAccess();
+$GLOBALS['$logger'];
 
 class AuthenticationAndAuthorization {
     //put your code here
     function __construct() {
        
-       //$logger = Logger::getLogger("main");
-       //print "In BaseClass constructor\n";
    }
-    public function performAaA() {    
-        $logger = Logger::getLogger('AuthenticationAndAuthorization');
+    public function performAaA($loginId, $pwd) {    
+        $success = 'true';
+        $GLOBALS['$logger'] = Logger::getLogger('AuthenticationAndAuthorization');
         $dataAccessObj = new LConnectDataAccess();
         
-        //$logger = Logger::getRootLogger();
-        $logger->debug("Hello World performAaA1!");
-
-        $logger->info("This is an informational message performAaA1.");
-        $logger->warn("I'm not feeling so good...");
-        $query = 'employee';
+        $query = 'user_details';
         $where = $data = array(
-                'EMP_ID' => '2',
+                'LOGIN_ID' => $loginId,
+                'LOGIN_PWD' => $pwd
             );
         $result = $dataAccessObj->queryWhere($query, $where);
-        
-        foreach ($result->result_array() as $row)
+        $GLOBALS['$logger']->debug('Fetched details for user: ' . $loginId . $result->num_rows());
+        if ($result->num_rows() == 0)
         {
-            echo $row['EMP_NAME'];
-            echo $row['EMP_DEPT'];
-            echo $row['EMP_ADDRESS'];
+            $errorCode = '001';
+            $GLOBALS['$logger']->error('Invalid user:  '. $loginId);
+            $success = 'false';
+            throw new LConnectApplicationException($errorCode, new Exception(), "Invalid  User");
         }
-        $result1 = $dataAccessObj->query($query);
-        echo '*************';
-        foreach ($result1->result_array() as $row)
-        {
-            echo $row['EMP_NAME'];
-            echo $row['EMP_DEPT'];
-            echo $row['EMP_ADDRESS'];
-        }
+        else {
+            $GLOBALS['$logger']->debug('Valid user:'. $loginId);
+            foreach ($result->result_array() as $row)
+                {
+                    $GLOBALS['$logger']->debug($row['USER_NAME']);
+                    $GLOBALS['$logger']->debug($row['LOGIN_ID']);
+                    $GLOBALS['$logger']->debug($row['LOGIN_PWD']);
+                    //echo "Successful login";
+                }    
+            }               
+        return $success;    
     }
     
     public function authenticate() {

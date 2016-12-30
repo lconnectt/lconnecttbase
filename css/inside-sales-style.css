@@ -1,0 +1,9 @@
+body{margin:auto;}
+#table1{margin-top:20px;}
+a.addPlus{bottom:38px!important;right:30px;}
+#search{ background-image: url(search.png); background-repeat: no-repeat;}
+.txtLabel{width:20%!important;}
+.txtInput{width:30%!important;}
+.errMessage{color:#FF0000!important;font-size:11px;}
+button.btns{padding:5px;}
+input[type="button"]{cursor:pointer;}

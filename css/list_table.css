@@ -1,0 +1,59 @@
+        
+        #list_table
+        {
+            
+            width: 470px;
+			float:left;
+        }
+        #list_table th
+        {
+            background-color: #f1f1f1;
+            padding: 0px 5px;
+            color: #666;
+			font-size: 13px;
+        }
+        #list_table td
+        {
+            padding: 3px 5px;
+            color: #fff;
+        }
+        #list_table tr:nth-child(odd)
+        {
+            background-color: #f3f3f3;
+            border-bottom: 1px solid #ddd;
+            border-top: 1px solid #ddd;
+        }
+        #list_table tr:nth-child(even)
+        {
+            background-color: #fff;
+        }
+        #list_table td span
+        {
+            color: #777;
+        }
+        #list_table tr:hover
+        {
+            background: #FFFFEA;
+        }
+        
+        
+        #list_table input[type='text'], select
+        {
+            padding: 3px 5px;
+            color: #1122CC;
+            border: 1px solid #ddd;
+        }
+       
+       
+        #list_table #add
+        {
+           color:green;
+		   font-size: 25px;
+		   font-weight: 800;
+		   padding:0px 3px;
+        }
+       
+        
+#list_table thead tr{
+		height: 44px;
+		}

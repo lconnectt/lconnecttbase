@@ -1,0 +1,150 @@
+﻿        html, body
+        {
+            font-family: 'Source Sans Pro','Helvetica Neue',Helvetica,Arial,sans-serif;
+            font-size: 81.2%;
+        }
+        
+        #table1
+        {
+            border-spacing: 0;
+            border-collapse: collapse;
+            box-shadow: 1px 1px 2px #eee;
+            width: 98%;
+			margin:0 auto;
+        }
+        #table1 th
+        {
+            background-color: #c1c1c1;
+            padding: 0px 5px;
+            color: #000;
+			font-size: 13px;
+        }
+        #table1 td
+        {
+            padding: 3px 5px;
+            color: #000;
+        }
+        #table1 tr:nth-child(odd)
+        {
+            background-color: #fff;
+            border-bottom: 1px solid #ddd;
+            border-top: 1px solid #ddd;
+        }
+        #table1 tr:nth-child(even)
+        {
+            background-color: #fff;
+        }
+        #table1 td span
+        {
+            color: #777;
+        }
+        #table1 tr:hover
+        {
+            background: #fff;
+        }
+        
+        
+        #table1 input[type='text'], select
+        {
+            padding: 3px 5px;
+            color: #1122CC;
+            border: 1px solid #ddd;
+        }
+        #msg
+        {
+            color: #f00;
+            padding: 6px 10px;
+            text-align: center;
+            background-color: #ffffba;
+            margin: 5px 0;
+            border: 1px solid #eee;
+        }
+       
+        #table1 #add
+        {
+           color:green;
+		   font-size: 25px;
+		   font-weight: 800;
+		   padding:0px 3px;
+        }
+        .selectBox-dropdown
+        {
+            width: 80px;
+        }
+        .hide
+        {
+            visibility: hidden;
+            display: none;
+        }
+        .show
+        {
+            visibility: visible;
+            display: block;
+        }
+        input[type='button']
+        {
+            border-raduis: 2px;
+            padding: 5px 13px;
+            color: #fff;
+            border: 0;
+			background-color:#999;            
+           
+        }
+        input[type='button']:hover
+        {
+            background-color: #3F4551;
+        }
+        .error
+        {
+            background-color: #FFD2D2;
+        }
+		
+fieldset{
+		margin:auto;
+		width:90%;
+		margin-top: 0px;
+		}
+legend{		
+		border:1px solid black;
+		padding: 10px;
+		font-size: 20px;
+		font-family: serif;
+		background: #ccc;
+		font-weight: 900;
+		}
+fieldset #all{
+		margin:auto;
+		width:100%;
+	}
+
+fieldset #all .text-area{
+		width:82%;
+		} 
+fieldset #all input[type="button"]
+		{
+		padding:6px 3px;
+		border-radius: 5px;
+		cursor: pointer
+		}
+fieldset #all input[type="text"],
+fieldset #all input[type="button"],
+fieldset #all input[type="submit"]
+		{		
+		width:97%;		
+		}
+		fieldset #all input[type="submit"]
+		{
+		cursor: pointer;
+		font-size: 13px;
+		font-weight: 600;
+		padding: 6px;		
+		}
+		
+#table1 thead tr{
+		height: 44px;
+		}
+
+#table1 th.theading{
+	background:#808080!important;
+	color:#fff;
+}

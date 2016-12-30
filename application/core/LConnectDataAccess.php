@@ -20,22 +20,38 @@ class LConnectDataAccess extends CI_Controller {
        parent::__construct();
        $this->load->database(); //load database
     } 
-    
-    function connect() {
-        $GLOBALS['$logger']->debug("LConnectDataAccess..Connecting to Database.");
+
+    /*
+     * Query records which matches specific WHERE clause
+     * TODO - ORDER BY 
+     */    
+    public function queryWhere($queryString, $whereCondition) {
+        $GLOBALS['$logger']->debug("Executing Query for table: ".$queryString);
+        $result = $this->db->get_where($queryString, $whereCondition);
+        $this->db->close();
+        $GLOBALS['$logger']->debug("DB Connection closed successfully.. " . $result->num_rows());
+        return $result;        
     }
     
-    public function queryWhere($queryString, $whereCondition) {
-        $GLOBALS['$logger']->debug("Executing Query: ");
-        $result = $this->db->get_where($queryString, $whereCondition);
+    /*
+     * Query all records from given table
+     * TODO Order By
+     */
+    public function query($queryString) {
+        $GLOBALS['$logger']->debug("Executing Query: ".$queryString);
+        $result = $this->db->get($queryString);
         $this->db->close();
         $GLOBALS['$logger']->debug("DB Connection closed successfully.. ");
         return $result;        
     }
     
-    public function query($queryString) {
-        $GLOBALS['$logger']->debug("Executing Query: ");
-        $result = $this->db->get($queryString);
+    /*
+     * This function recieves direct query (as is)
+     * TODO Order By
+     */
+    public function queryString($queryString) {
+        $GLOBALS['$logger']->debug("Executing Query: ".$queryString);
+        $result = $this->db->query($queryString);
         $this->db->close();
         $GLOBALS['$logger']->debug("DB Connection closed successfully.. ");
         return $result;        

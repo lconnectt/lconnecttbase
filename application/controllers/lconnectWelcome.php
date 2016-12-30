@@ -27,10 +27,23 @@ class lconnectWelcome extends CI_Controller {
         
 	public function index()
 	{
-            $GLOBALS['$log'] = Logger::getLogger('LconnectWelcome..Test..1');
-            $GLOBALS['$log']->info("Initializing Logger");
-            $GLOBALS['$log']->debug("Authenticate user and load Authorization object to Session");  // Not logged because DEBUG < WARN                      
+            $loginId= trim($_GET['q']," ");
+            $pwd= trim($_GET['r']," ");
+
+            $GLOBALS['$log'] = Logger::getLogger('LconnectWelcome'. $loginId .$pwd);            
+            $GLOBALS['$log']->debug("Authenticate user and load Authorization object to Session");                      
             $andaObj = new AuthenticationAndAuthorization();
-            $andaObj->performAaA();
-	}
+            try {
+                //$loginId = 'deepak.s'; //TODO: remove later. replace from actual user details read from login
+                //$pwd = 'test'; //TODO: replace later
+                $success = $andaObj->performAaA($loginId, $pwd);
+                if ($success == 'true') {
+                    $this->load->view('home');
+                }
+            } catch(LConnectApplicationException $lae) {
+                $GLOBALS['$log']->debug('Error Message from A&A:' . $lae->getErrorMessage());
+                echo "Exception: " . $lae->getErrorMessage();
+                //TODO: Prepare Error Response and Return to View. (ie, invoke view page from here)
+            }
+        }
 }

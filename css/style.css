@@ -1,0 +1,133 @@
+@import url(http://weloveiconfonts.com/api/?family=fontawesome);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,700);
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+@font-face {
+	font-family:'Bebas-Regular';
+	src: url('../fonts/bebas/Bebas-Regular.eot');
+	src: url('../fonts/bebas/Bebas-Regular.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/bebas/Bebas-Regular.woff') format('woff'),
+		url('../fonts/bebas/Bebas-Regular.ttf') format('truetype'),
+		url('../fonts/bebas/Bebas-Regular.otf') format('opentype'),
+		url('../fonts/bebas/Bebas-Regular.svg#Bebas-Regular') format('svg');
+	font-weight: 400;
+	font-style: normal;
+	font-stretch: normal;
+	unicode-range: U+0020-007F;
+}
+.container-fluid{padding-left:0px!important;padding-right:0px!important;}
+body{width:100%;
+	background: url(../images/new/BG.png) no-repeat center center fixed; /* For IE 6 and 7 */
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;}
+.header{background:#B5000A; width:100%;height:90px;margin:0 auto;text-align:center;}
+#headerlogo img{width:260px;}
+.footer{margin:0 auto 30px;text-align:center;}
+
+.content-body{
+  margin: 4% auto 5%;
+  max-width: 30rem;
+  width: 90%;
+  padding:5rem 0 0;
+}
+.form input[type="password"], .form input[type="text"], .form input[type="button"],.form input[type="submit"] {
+  width: 100%;
+}
+.form--login {
+  color: #606468;
+}
+.form--login label,
+.form--login input[type="text"],
+.form--login input[type="password"],
+.form--login input[type="button"],
+.form input[type="submit"]{
+  border-radius: 0.25rem;
+  padding: 1rem;
+}
+.form--login label {
+	font-weight:normal!important;
+  color:#fff;
+}
+.form--login input[type="checkbox"] {
+  display: none;
+}
+.form--login input[type="text"], .form--login input[type="password"] {
+  background-color: #000!important;
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+  color:#fff;
+  opacity:0.72;
+  font-family:'Roboto',sans-serif;
+  text-align:center;
+  border:2px solid #8B8F8E;
+   font-size:19px!important;
+}
+
+.form--login input[type="checkbox"] + label:before{
+	background-color: #000!important;
+	border: 2px solid #8B8F8E;
+  content: "\00a0";
+  display: inline-block;
+  font-family:'Roboto',sans-serif;
+  height: 24px;
+  margin: 0 .25em 0 0;
+  padding: 0;
+  vertical-align: middle;
+  width: 24px;
+  opacity:0.72;
+}
+
+.form--login input[type="checkbox"]:checked + label:before {
+  color:#fefefe;
+  content: "\2713";
+  text-align: center;
+}
+.form--login input[type="checkbox"]:checked + label:after {
+  font-weight: bold;
+}
+
+.form--login input[type="text"]:focus, .form--login input[type="text"]:hover, .form--login input[type="password"]:focus, .form--login input[type="password"]:hover {
+  background-color: #000!important;
+  opacity:0.5;
+  color:#fff;
+  font-family:'Roboto',sans-serif;
+  text-align:center;
+  border:2px solid #8B8F8E;
+  font-size:19px!important;
+}
+
+.form--login input[type="button"],.form--login input[type="submit"]{
+  background: #B5000A;
+  color: #FFF;
+  font-family:'Bebas-Regular';
+  cursor:pointer;
+  border-top:3px solid #B5000A;
+  border-left:3px solid #B5000A;
+  border-right:3px solid #B5000A;
+  border-bottom:5px solid #7D0007;
+  font-size:19px!important;
+}
+.form--login input[type="button"]:focus, .form--login input[type="button"]:hover,.form--login input[type="submit"]:focus, .form--login input[type="submit"]:hover {
+  background: #B5000A; 
+}
+ div.forgot-password{float:right;}
+ div.forgot-password > a{color:#fff;text-decoration:none;}
+ 
+ span.forgot{margin-left:-9px;}
+ .footer div{margin-bottom:30px;}
+ .footer div img{width:127px;}
+ .content-text{margin:0 auto;text-align:center;color:#fff;}
+ .content-text h3{font-family:'Bebas-Regular';}
+ 
+ @media only screen and (min-width:605px) and (max-width:666px){
+	 .footer{margin:0 auto 30px;text-align:center;}
+	 .content-body{margin: 4% auto 8%;}
+ }
+  @media only screen and (max-width:605px){
+	 .footer{margin:0 auto 30px;text-align:center;}
+	 .content-body{margin: 4% auto 8%;}
+ }
+ #androidspan{text-align:right;}
+ #applespan{text-align:left;}

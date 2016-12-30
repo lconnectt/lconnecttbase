@@ -1,0 +1,54 @@
+.leftContent{float:left; width:20%;margin-top:14px;}
+.rightContent{float:right; width:80%; background:#EDE9E4;margin-top:14px;}
+.tabs { width:100%; display:inline-block;background:#fff;}
+.tab-links:after { display:block; clear:both; content:''; }
+.tab-links li { float:left; list-style:none; }
+.tab-links a { padding:6px 9px; display:inline-block; border-radius:3px 3px 0px 0px; background:#c1c1c1; font-size:15px; font-weight:normal; color:#f6f6f6; transition:all linear 0.15s; text-decoration:none; }
+.tab-links a:hover { background:#dedede; text-decoration:none; color:#000; }
+li.active a, li.active a:hover { background:#dedede; color:#000;text-decoration:none; }
+.tab-content { padding:0; border-radius:3px; box-shadow:-1px 1px 1px rgba(0,0,0,0.15); overflow-y:scroll; height:460px }
+.tab { display:none; }
+.tab.active { display:block; }
+.tab table tr td label.editbtn{float:right;}
+.tab table tr td label a{text-decoration:none;cursor:pointer;color:#000;}
+.tab table tr td label a:hover{font-weight:bold;}
+.chatContent{width:100%;}
+.chatContent > .contentHeader{height:40px;width:100%;background:#c1c1c1;color:#fff;padding:0 16px;font-weight:normal;}
+.chatContent > .contentHeader span h1{font-size:20px;color:#000;}
+.tab table tr td{border-top:1px solid #ddd!important;border-bottom:1px solid #ddd!important;}
+.tab table tr td:hover,.tab table tr td:active{color:#000;}
+.chatContent > .contentHeader > #leftSide{float:left;margin-top:-10px;}
+.chatContent > .contentHeader > #rightSide{float:right;margin-top:6px;border:1px solid #cacaca;width:500px;}
+.chatContent > .contentHeader > #rightSide input {border:none;width:89%;} .chatContent > .contentHeader > #rightSide select{border:none;width:100%;color:#000;}
+.chatContent > .contentHeader > #rightSide button{background-color:#fff;border:none;height:23px;color:#000;}
+.chatContent > .contentBody{height:460px;overflow-y:scroll;overflow-x:hidden;float:left;width:100%;background:#DBD4CA;}
+.tab table tr td label{font-weight:normal!important;font-size:13px;}
+.leftContent > .contentHeader{height:40px;width:100%;background:#EEEEEE;color:#3B3B3B;padding:0 4px;font-weight:normal;border-right:1px solid #666666;}
+.bubble{ border-radius: 5px; box-shadow: 0 1px 0 0 #000; display: inline-block; padding: 10px 18px; position: relative; vertical-align: top; }
+.bubble::before { content: "\00a0"; display: block; height: 16px; position: absolute; top: 11px;
+    transform:             rotate( 29deg ) skew( -35deg );
+        -moz-transform:    rotate( 29deg ) skew( -35deg );
+        -ms-transform:     rotate( 29deg ) skew( -35deg );
+        -o-transform:      rotate( 29deg ) skew( -35deg );
+        -webkit-transform: rotate( 29deg ) skew( -35deg );
+    width:  20px;
+}
+
+.me { float: left; margin: 5px 45px 5px 20px; background:#fff;}
+
+.me::before { box-shadow: -2px 2px 2px 0 rgba( 178, 178, 178, .4 ); left: -9px;background:#fff;}
+
+.you { float: right; margin: 5px 20px 5px 45px; background: #82CAFF;}
+
+.you::before { box-shadow: 2px -2px 2px 0 rgba( 178, 178, 178, .4 ); right: -9px;background:#82CAFF;}
+#dispData tr td{padding:12px 16px!important;max-width:500px;color:#000;}
+#dispData tr td.me span.dispTime{font-size:10px;float:right;margin:27px 0 -10px 18px;color:#000;font-weight:600;}
+#dispData tr td.me span.dispName{font-size:11px;float:left;margin:-10px 0 -5px -8px;color:#000;font-weight:600;}
+#dispData tr td.you{color:#000;}
+#dispData tr td.you span.dispTime{font-size:10px;float:right;margin:27px 0 -10px 18px;color:#000;font-weight:600;}
+#dispData tr td.you span.dispName{font-size:11px;float:left;margin:-10px 0 -5px -8px;color:#000;font-weight:600;}
+
+#tab1 > table.table > tr > td > label.editbtn{float:right;}
+.tabs ul{
+background: #c1c1c1;  
+}
