@@ -8,7 +8,7 @@
 $GLOBALS['$logger'];
 $GLOBALS['$errorCode'] = '000';
 $GLOBALS['$exceptionObj'] = null;
-$GLOBALS['$errorMsg'] = 'Somethibg went wrong! Please contact helpdesk.';
+$GLOBALS['$errorMsg'] = 'Something went wrong! Please contact helpdesk.';
 /**
  * Description of LConnectApplicationException
  *
